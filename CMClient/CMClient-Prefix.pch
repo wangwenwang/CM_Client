@@ -1,0 +1,261 @@
+//
+//  CMClient.pch
+//  CMClient
+//
+//  Created by 凯东源 on 17/1/14.
+//  Copyright © 2017年 城马联盟. All rights reserved.
+//
+
+#ifndef CMClient_pch
+#define CMClient_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* CMClient_pch */
+
+
+
+/*--------- import ---------*/
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>
+
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>//引入周边雷达功能所有的头文件
+#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
+
+#import "UITextField+Extension.h"
+#import "UILabel+Trim.h"
+#import "UITextView+Trim.h"
+
+/*--------- 主题色 ---------*/
+#define CMColor [UIColor colorWithRed:244 / 255.0 green:130 / 255.0 blue:1 / 255.0 alpha:1]
+
+#define CMRedColor [UIColor colorWithRed:232 / 255.0 green:70 / 255.0 blue:1 / 255.0 alpha:1]
+
+#define CMWhiteColor [UIColor whiteColor]
+
+/*--------- 最短定位距离(米) ---------*/
+#define CMLocationDistance 500
+
+
+/*--------- 判断iOS版本 ---------*/
+#define SystemVersion [[UIDevice currentDevice] systemVersion].floatValue
+
+
+/*--------- 应用名称 ---------*/
+#define AppDisplayName [[NSBundle mainBundle] infoDictionary][@"CFBundleDisplayName"]
+
+
+/*--------- 屏幕尺寸 ---------*/
+#define ScreenHeight [UIScreen mainScreen] .bounds.size.height
+#define ScreenWidth [UIScreen mainScreen] .bounds.size.width
+
+
+/*--------- 颜色RGB ---------*/
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+
+/*--------- 通知 ---------*/
+
+/// 选择地区成功后，通知刷新数据
+#define kAreaCity_reloadData_Notification @"AreaCity_reloadData_Notification"
+/// 添加车队成功后，通知车队列表重新请求数据
+#define kFleetListVC_RequestNetWorkData_Notification @"FleetListVC_RequestNetWorkData_Notification"
+/// 添加车辆成功后，通知车辆列表重新请求数据
+#define kTruckListVC_RequestNetWorkData_Notification @"TruckListVC_RequestNetWorkData_Notification"
+/// 添加司机成功后，通知司机列表重新请求数据
+#define kDriverListVC_RequestNetWorkData_Notification @"DriverListVC_RequestNetWorkData_Notification"
+
+/// 竞标货源时 选择车队
+#define kSupplyInfoVC_refreshFleet_Notification @"SupplyInfoVC_refreshFleet_Notification"
+/// 竞标货源时 选择司机
+#define kSupplyInfoVC_refreshDriver_Notification @"SupplyInfoVC_refreshDriver_Notification"
+/// 竞标货源时 选择车辆
+#define kSupplyInfoVC_refreshTruck_Notification @"SupplyInfoVC_refreshTruck_Notification"
+/// 竞标货成功 返回货源列表，并通知货源列表更新数据
+#define kSupplyListVC_refreshNetworkData_Notification @"SupplyListVC_refreshNetworkData_Notification"
+
+/// 提交反馈意见成功 返回到我的界面 显示Tools
+#define kMineVC_UserFeedback_Notification @"MineVC_UserFeedback_Notification"
+
+
+
+
+/*--------- 约定字符串 ---------*/
+
+#define kINDIVIDUAL @"INDIVIDUAL"
+
+#define kCOMPANY @"COMPANY"
+
+#define kDRIVER @"Driver"
+
+#define kCLIENT @"Client"
+
+/// 将用户模型存进UserDefaults
+#define kUserModelSaveUserDefaults @"UserModelSaveUserDefaults"
+
+
+
+
+
+
+/*--------- ZY ---------*/
+#define CheckOrderViewControllerMenuHeight 44
+
+
+/*--------- API ---------*/
+
+/// 服务器地址
+#define API_ServerAddress @"http://oms.kaidongyuan.com:13500"
+
+/// 注册接口
+#define API_register @"http://oms.kaidongyuan.com:13500/api/register"
+
+/// 登录接口
+#define API_Login @"http://oms.kaidongyuan.com:13500/api/Login"
+
+/// 上传单个点位置
+#define API_UploadPosition @"http://oms.kaidongyuan.com:13500/api/UploadPosition"
+
+/// 批量上传缓存位置数据
+#define API_CurrentLocaltionList @"http://oms.kaidongyuan.com:13500/api/CurrentLocaltionList"
+
+/// 根据订单编号获取定位
+#define API_GetOrderLocaltion @"http://oms.kaidongyuan.com:13500/api/GetOrderLocaltion"
+
+/// 保存APP推送所需token值
+#define API_SavaPushToken @"http://oms.kaidongyuan.com:13500/api/SavaPushToken"
+
+/// 获取APP推送消息
+#define API_GetPushMessage @"http://oms.kaidongyuan.com:13500/api/GetPushMessage"
+
+/// 获取车队列表
+#define API_GetFleetList @"http://oms.kaidongyuan.com:13500/api/GetFleetList"
+
+/// 添加车队
+#define API_AddFleet @"http://oms.kaidongyuan.com:13500/api/AddFleet"
+
+/// 获取司机列表
+#define API_GetDriverList @"http://oms.kaidongyuan.com:13500/api/GetDriverList"
+
+/// 添加司机
+#define API_AddDriver @"http://oms.kaidongyuan.com:13500/api/AddDriver"
+
+/// 获取货源列表
+#define API_GetSupplyList @"http://oms.kaidongyuan.com:13500/api/GetSupplyList"
+
+/// 获取货源详情
+#define API_GetSupplyInfo @"http://oms.kaidongyuan.com:13500/api/GetSupplyInfo"
+
+/// 获取车辆列表
+#define API_GetVehicleList @"http://oms.kaidongyuan.com:13500/api/GetVehicleList"
+
+/// 添加车辆
+#define API_AddVehicle @"http://oms.kaidongyuan.com:13500/api/AddVehicle"
+
+/// 根据司机电话 --> 查询司机信息
+#define API_GetDriverInfo @"http://oms.kaidongyuan.com:13500/api/GetDriverInfo"
+
+/// 获取装运列表
+#define API_GetShipmentList @"http://oms.kaidongyuan.com:13500/api/GetShipmentList"
+
+/// 获取装运信息
+#define API_GetShipmentInfo @"http://oms.kaidongyuan.com:13500/api/GetShipmentInfo"
+
+/// 获取订单信息
+#define API_GetOrderInfo @"http://oms.kaidongyuan.com:13500/api/GetOrderInfo"
+
+/// 删除车辆
+#define API_DeleteVehicle @"http://oms.kaidongyuan.com:13500/api/DeleteVehicle"
+
+/// 删除司机
+#define API_DeleteDriver @"http://oms.kaidongyuan.com:13500/api/DeleteDriver"
+
+/// 修改密码
+#define API_UpdatePassword @"http://oms.kaidongyuan.com:13500/api/UpdatePassword"
+
+/// 获取个人信息
+#define API_GetUserInfo @"http://oms.kaidongyuan.com:13500/api/GetUserInfo"
+
+/// 竞标货源
+#define API_ReceivingSupply @"http://oms.kaidongyuan.com:13500/api/ReceivingSupply"
+
+/// 授权司机
+#define API_InfoDriver @"http://oms.kaidongyuan.com:13500/api/InfoDriver"
+
+/// 交付订单
+#define API_DriverPay @"http://oms.kaidongyuan.com:13500/api/DriverPay"
+
+/// 查看交付订单
+#define API_GetAutograph @"http://oms.kaidongyuan.com:13500/api/GetAutograph"
+
+/// 发布货源
+#define API_UpDate_SUPPLY_Detail @"http://oms.kaidongyuan.com:13500/api/UpDate_SUPPLY_Detail"
+
+/// 车辆尺寸/类型
+#define API_GetItemList @"http://oms.kaidongyuan.com:13500/api/GetItemList"
+
+/// 修改个人信息
+#define API_ModifyUserInfo @"http://oms.kaidongyuan.com:13500/api/ModifyUserInfo"
+
+/// 查询车辆信息
+#define API_SearchVehicle @"http://oms.kaidongyuan.com:13500/api/SearchVehicle"
+
+/// 获取个人信息
+#define API_UserFeedback @"http://oms.kaidongyuan.com:13500/api/UserFeedback"
+
+/// 货源流程正向
+#define API_UpdateAudit @"http://oms.kaidongyuan.com:13500/api/UpdateAudit"
+
+/// 货源流程反向
+#define API_RuturnAudit @"http://oms.kaidongyuan.com:13500/api/RuturnAudit"
+
+/// 查看交付订单 图片文件夹
+#define kGetAutographDir @"Uploadfile"
+
+
+
+#ifdef DEBUG
+#define LMLog( s, ... ) NSLog( @"<%p %@:(%d)> %@", self, [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define LMLog( s, ... )
+#endif
+
+#ifdef DEBUG
+#  define LOG(fmt, ...) do {                                            \
+NSString* file = [[NSString alloc] initWithFormat:@"%s", __FILE__]; \
+NSLog((@"%@(%d) " fmt), [file lastPathComponent], __LINE__, ##__VA_ARGS__); \
+[file release];                                                 \
+} while(0)
+#  define LOG_METHOD NSLog(@"%s", __func__)
+#  define LOG_CMETHOD NSLog(@"%@/%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
+#  define COUNT(p) NSLog(@"%s(%d): count = %d\n", __func__, __LINE__, [p retainCount]);
+#  define LOG_TRACE(x) do {printf x; putchar('\n'); fflush(stdout);} while (0)
+#else
+#  define LOG(...)
+#  define LOG_METHOD
+#  define LOG_CMETHOD
+#  define COUNT(p)
+#  define LOG_TRACE(x)
+#endif
+
+
+
+/*--------- NSUserDefaults ---------*/
+// 服务器地址用户名
+#define udUserName @"userName"
+// 服务器地址用户密码
+#define udPassWord @"passWord"
+

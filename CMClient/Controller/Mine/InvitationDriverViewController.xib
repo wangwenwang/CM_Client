@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvitationDriverViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6HV-Xz-Juo" userLabel="Top">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="如果您觉得好用就分享给朋友吧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGY-MK-3TE">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.13724356018359646" green="0.13668791823953333" blue="0.13779920212765961" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wGY-MK-3TE" firstAttribute="centerX" secondItem="6HV-Xz-Juo" secondAttribute="centerX" id="Bcc-YN-1eY"/>
+                        <constraint firstAttribute="bottom" secondItem="wGY-MK-3TE" secondAttribute="bottom" id="VjT-gf-7uL"/>
+                        <constraint firstAttribute="height" constant="40" id="dGU-fs-2aF"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61b-Rc-EHl" userLabel="Middle">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRcode" translatesAutoresizingMaskIntoConstraints="NO" id="Rw0-aL-h1L"/>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Rw0-aL-h1L" firstAttribute="centerX" secondItem="61b-Rc-EHl" secondAttribute="centerX" id="Bu6-DJ-361"/>
+                        <constraint firstItem="Rw0-aL-h1L" firstAttribute="centerY" secondItem="61b-Rc-EHl" secondAttribute="centerY" id="pZ1-6C-mMx"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esi-6c-hxf" userLabel="Buttom">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineinvitationDriver_bg" translatesAutoresizingMaskIntoConstraints="NO" id="6Z4-eo-VV7"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEO-fo-JEJ" userLabel="part1">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineinvitationDriver_publicNo" translatesAutoresizingMaskIntoConstraints="NO" id="AS6-Qn-KaU"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加公众帐号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22D-vN-axH">
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信号: chengmalianmeng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyO-qy-uLS">
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="AS6-Qn-KaU" firstAttribute="centerY" secondItem="jEO-fo-JEJ" secondAttribute="centerY" id="7vv-y0-tfc"/>
+                                <constraint firstItem="dyO-qy-uLS" firstAttribute="centerY" secondItem="jEO-fo-JEJ" secondAttribute="centerY" constant="8" id="95T-Yw-rJo"/>
+                                <constraint firstItem="22D-vN-axH" firstAttribute="centerY" secondItem="jEO-fo-JEJ" secondAttribute="centerY" constant="-11" id="JWK-w3-wBl"/>
+                                <constraint firstItem="dyO-qy-uLS" firstAttribute="leading" secondItem="22D-vN-axH" secondAttribute="leading" id="Kyn-in-I1X"/>
+                                <constraint firstItem="AS6-Qn-KaU" firstAttribute="leading" secondItem="jEO-fo-JEJ" secondAttribute="leading" id="UUv-WT-HAC"/>
+                                <constraint firstItem="22D-vN-axH" firstAttribute="leading" secondItem="AS6-Qn-KaU" secondAttribute="trailing" constant="7" id="cKQ-SK-awW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-hG-vfs" userLabel="part2">
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineinvitationDriver_scan" translatesAutoresizingMaskIntoConstraints="NO" id="elX-0I-XaY"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="扫一扫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3e-Rt-nDg">
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其他手机扫描二维码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hku-oV-frR">
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="C3e-Rt-nDg" firstAttribute="centerY" secondItem="T1u-hG-vfs" secondAttribute="centerY" constant="-11" id="6Gb-D9-Ga1"/>
+                                <constraint firstAttribute="height" constant="65" id="BUv-9i-t7Q"/>
+                                <constraint firstItem="elX-0I-XaY" firstAttribute="centerY" secondItem="T1u-hG-vfs" secondAttribute="centerY" id="JIh-jW-Fhb"/>
+                                <constraint firstItem="elX-0I-XaY" firstAttribute="leading" secondItem="T1u-hG-vfs" secondAttribute="leading" id="Nhn-xH-RHC"/>
+                                <constraint firstAttribute="width" constant="190" id="RAJ-QM-XiJ"/>
+                                <constraint firstItem="C3e-Rt-nDg" firstAttribute="leading" secondItem="elX-0I-XaY" secondAttribute="trailing" constant="7" id="dZZ-Fv-o0a"/>
+                                <constraint firstItem="Hku-oV-frR" firstAttribute="leading" secondItem="C3e-Rt-nDg" secondAttribute="leading" id="s9b-AM-XCx"/>
+                                <constraint firstItem="Hku-oV-frR" firstAttribute="centerY" secondItem="T1u-hG-vfs" secondAttribute="centerY" constant="8" id="zuh-I5-0LQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="T1u-hG-vfs" firstAttribute="width" secondItem="jEO-fo-JEJ" secondAttribute="width" id="2xw-WR-OLB"/>
+                        <constraint firstItem="T1u-hG-vfs" firstAttribute="top" secondItem="jEO-fo-JEJ" secondAttribute="bottom" constant="10" id="5KW-zc-lZQ"/>
+                        <constraint firstItem="jEO-fo-JEJ" firstAttribute="centerX" secondItem="esi-6c-hxf" secondAttribute="centerX" id="LxS-Ma-xEV"/>
+                        <constraint firstAttribute="bottom" secondItem="T1u-hG-vfs" secondAttribute="bottom" constant="10" id="UPy-XE-g12"/>
+                        <constraint firstAttribute="bottom" secondItem="6Z4-eo-VV7" secondAttribute="bottom" id="V1e-ai-HqX"/>
+                        <constraint firstItem="T1u-hG-vfs" firstAttribute="height" secondItem="jEO-fo-JEJ" secondAttribute="height" id="ZHR-0C-PCb"/>
+                        <constraint firstItem="6Z4-eo-VV7" firstAttribute="leading" secondItem="esi-6c-hxf" secondAttribute="leading" id="f9C-ES-hvX"/>
+                        <constraint firstAttribute="height" constant="215" id="hIB-TC-gcn"/>
+                        <constraint firstAttribute="trailing" secondItem="6Z4-eo-VV7" secondAttribute="trailing" id="xxV-Nt-L9D"/>
+                        <constraint firstItem="T1u-hG-vfs" firstAttribute="centerX" secondItem="esi-6c-hxf" secondAttribute="centerX" id="y4S-Df-85l"/>
+                        <constraint firstItem="T1u-hG-vfs" firstAttribute="centerX" secondItem="esi-6c-hxf" secondAttribute="centerX" id="zNV-5p-zGj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="esi-6c-hxf" firstAttribute="top" secondItem="61b-Rc-EHl" secondAttribute="bottom" id="1nS-TT-gRh"/>
+                <constraint firstItem="61b-Rc-EHl" firstAttribute="top" secondItem="6HV-Xz-Juo" secondAttribute="bottom" id="Fb4-VA-DmH"/>
+                <constraint firstAttribute="trailing" secondItem="esi-6c-hxf" secondAttribute="trailing" id="HLi-Bg-TXz"/>
+                <constraint firstItem="esi-6c-hxf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="HX1-M2-Z2S"/>
+                <constraint firstItem="6HV-Xz-Juo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="V28-KE-xYG"/>
+                <constraint firstAttribute="trailing" secondItem="6HV-Xz-Juo" secondAttribute="trailing" id="eO4-kY-jQ8"/>
+                <constraint firstItem="6HV-Xz-Juo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gK4-Pm-7UZ"/>
+                <constraint firstAttribute="trailing" secondItem="61b-Rc-EHl" secondAttribute="trailing" id="pVG-dV-dL6"/>
+                <constraint firstAttribute="bottom" secondItem="esi-6c-hxf" secondAttribute="bottom" id="rTb-tF-o0L"/>
+                <constraint firstItem="61b-Rc-EHl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="shb-eS-DJT"/>
+            </constraints>
+            <point key="canvasLocation" x="69.5" y="128.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="QRcode" width="128" height="128"/>
+        <image name="mineinvitationDriver_bg" width="320" height="206"/>
+        <image name="mineinvitationDriver_publicNo" width="47" height="51"/>
+        <image name="mineinvitationDriver_scan" width="47" height="52"/>
+    </resources>
+</document>

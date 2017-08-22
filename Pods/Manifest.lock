@@ -1,0 +1,66 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - BaiduMapKit (3.1.0)
+  - GCDWebServer (3.3.3):
+    - GCDWebServer/Core (= 3.3.3)
+  - GCDWebServer/Core (3.3.3)
+  - GTSDK (1.6.2.0-noidfa)
+  - LCActionSheet (2.6.0):
+    - Masonry (~> 1.0.1)
+  - Masonry (1.0.2)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.12)
+  - RadioButton (1.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SWTableViewCell (0.3.7)
+  - WMPageController (2.1.0)
+  - YCXMenu (0.0.11)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - BaiduMapKit
+  - GCDWebServer (~> 3.0)
+  - GTSDK (= 1.6.2.0-noidfa)
+  - LCActionSheet
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh
+  - RadioButton
+  - SDWebImage (~> 3.8)
+  - SWTableViewCell (~> 0.3.7)
+  - WMPageController
+  - YCXMenu (~> 0.0.11)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BaiduMapKit: 4cfaedb118cff7e157e9771859a4bf65a261b2a1
+  GCDWebServer: 1c39a1f0763e4eb492bee021e4270fce097d3555
+  GTSDK: c50e7706abc9154d2ff39bcc297f9b0881a659cd
+  LCActionSheet: 25b62201ad1ef2954ab5359795fbf46b2d2cd35b
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  RadioButton: 7ef053baf6ff0e7f9e777016c28e9ba4e330edba
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
+  WMPageController: 1a2aa3cc00da3ccb62203205cafffa0d10735195
+  YCXMenu: 6003bcd20d8ac72e3eb3c442c97ed21948c6dc1f
+
+PODFILE CHECKSUM: 603609539f42cfbf034c9095b56ca8522298b3f1
+
+COCOAPODS: 1.0.1

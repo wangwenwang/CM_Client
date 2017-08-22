@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddFleetViewController">
+            <connections>
+                <outlet property="ceoF" destination="hd2-Ul-zaQ" id="4dS-pX-JgY"/>
+                <outlet property="commitBtn" destination="0m5-qb-ppi" id="F3T-25-JUS"/>
+                <outlet property="contactTelF" destination="hbr-CS-jPA" id="Zjk-lO-iMj"/>
+                <outlet property="descF" destination="Wvc-zf-IMw" id="7d0-WO-9Sw"/>
+                <outlet property="fleetNameF" destination="0VP-pP-W3v" id="HhP-m7-BYm"/>
+                <outlet property="scrollContentViewHeight" destination="ER7-vn-pqJ" id="WYO-Bi-WdG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3is-Ff-pSd" customClass="TPKeyboardAvoidingScrollView">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fn1-4y-yBa">
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车队名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-pP-W3v" customClass="AddFleetTextField">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="43" id="bQV-Hb-Pz3"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车队描述" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wvc-zf-IMw" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车队负责人" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hd2-Ul-zaQ" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJB-8k-nD3" customClass="RadioButton">
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="个人车队" image="radio_button_checked">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入联系电话" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbr-CS-jPA" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0m5-qb-ppi" customClass="AddFleetButton">
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="添加">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="commitOnclick:" destination="-1" eventType="touchUpInside" id="mPS-3a-Lq4"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="GJB-8k-nD3" firstAttribute="leading" secondItem="0VP-pP-W3v" secondAttribute="leading" id="54P-Py-rL0"/>
+                                <constraint firstItem="0m5-qb-ppi" firstAttribute="leading" secondItem="hbr-CS-jPA" secondAttribute="leading" id="6OW-mL-jz9"/>
+                                <constraint firstAttribute="height" constant="600" id="ER7-vn-pqJ"/>
+                                <constraint firstItem="0m5-qb-ppi" firstAttribute="top" secondItem="hbr-CS-jPA" secondAttribute="bottom" constant="35" id="H3j-6K-Ide"/>
+                                <constraint firstItem="0m5-qb-ppi" firstAttribute="height" secondItem="0VP-pP-W3v" secondAttribute="height" id="K0a-VQ-hZb"/>
+                                <constraint firstItem="hd2-Ul-zaQ" firstAttribute="height" secondItem="0VP-pP-W3v" secondAttribute="height" id="OOM-wk-Umg"/>
+                                <constraint firstItem="hbr-CS-jPA" firstAttribute="height" secondItem="0VP-pP-W3v" secondAttribute="height" id="Pmp-5e-u5Y"/>
+                                <constraint firstItem="GJB-8k-nD3" firstAttribute="top" secondItem="0VP-pP-W3v" secondAttribute="bottom" constant="20" id="QWe-FC-Bpc"/>
+                                <constraint firstItem="hd2-Ul-zaQ" firstAttribute="top" secondItem="Wvc-zf-IMw" secondAttribute="bottom" constant="20" id="SF7-fM-rBl"/>
+                                <constraint firstItem="hbr-CS-jPA" firstAttribute="leading" secondItem="0VP-pP-W3v" secondAttribute="leading" id="U8C-rk-cUb"/>
+                                <constraint firstItem="0m5-qb-ppi" firstAttribute="trailing" secondItem="hbr-CS-jPA" secondAttribute="trailing" id="VKq-9D-q4t"/>
+                                <constraint firstItem="hbr-CS-jPA" firstAttribute="trailing" secondItem="0VP-pP-W3v" secondAttribute="trailing" id="ZmB-od-9fw"/>
+                                <constraint firstItem="0VP-pP-W3v" firstAttribute="leading" secondItem="Fn1-4y-yBa" secondAttribute="leading" constant="15" id="bmx-CG-Zkz"/>
+                                <constraint firstItem="Wvc-zf-IMw" firstAttribute="trailing" secondItem="0VP-pP-W3v" secondAttribute="trailing" id="dAb-Tb-2rM"/>
+                                <constraint firstItem="hd2-Ul-zaQ" firstAttribute="leading" secondItem="0VP-pP-W3v" secondAttribute="leading" id="fM6-iR-VAn"/>
+                                <constraint firstItem="0VP-pP-W3v" firstAttribute="top" secondItem="Fn1-4y-yBa" secondAttribute="top" constant="30" id="jeW-DK-fWC"/>
+                                <constraint firstItem="Wvc-zf-IMw" firstAttribute="leading" secondItem="0VP-pP-W3v" secondAttribute="leading" id="mKE-Vo-Pkp"/>
+                                <constraint firstAttribute="trailing" secondItem="0VP-pP-W3v" secondAttribute="trailing" constant="15" id="nFM-CQ-LN9"/>
+                                <constraint firstItem="Wvc-zf-IMw" firstAttribute="top" secondItem="GJB-8k-nD3" secondAttribute="bottom" constant="20" id="rsG-rE-ftb"/>
+                                <constraint firstItem="Wvc-zf-IMw" firstAttribute="height" secondItem="0VP-pP-W3v" secondAttribute="height" id="t6c-yP-7ZO"/>
+                                <constraint firstItem="hd2-Ul-zaQ" firstAttribute="trailing" secondItem="0VP-pP-W3v" secondAttribute="trailing" id="uqX-hT-JWi"/>
+                                <constraint firstItem="hbr-CS-jPA" firstAttribute="top" secondItem="hd2-Ul-zaQ" secondAttribute="bottom" constant="20" id="wet-bG-BNK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Fn1-4y-yBa" secondAttribute="trailing" id="0Fg-IC-oYp"/>
+                        <constraint firstItem="Fn1-4y-yBa" firstAttribute="centerX" secondItem="3is-Ff-pSd" secondAttribute="centerX" id="Dsc-UY-RXz"/>
+                        <constraint firstItem="Fn1-4y-yBa" firstAttribute="top" secondItem="3is-Ff-pSd" secondAttribute="top" id="nGh-x1-gd3"/>
+                        <constraint firstItem="Fn1-4y-yBa" firstAttribute="leading" secondItem="3is-Ff-pSd" secondAttribute="leading" id="otR-SB-tsy"/>
+                        <constraint firstAttribute="bottom" secondItem="Fn1-4y-yBa" secondAttribute="bottom" id="pUf-Oc-1C6"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3is-Ff-pSd" secondAttribute="bottom" id="LxZ-Lh-QOd"/>
+                <constraint firstAttribute="trailing" secondItem="3is-Ff-pSd" secondAttribute="trailing" id="XFO-3F-NJM"/>
+                <constraint firstItem="3is-Ff-pSd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="y3M-b9-k3E"/>
+                <constraint firstItem="3is-Ff-pSd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yNK-4z-VO9"/>
+            </constraints>
+            <point key="canvasLocation" x="121.5" y="99.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="radio_button_checked" width="15" height="15"/>
+    </resources>
+</document>

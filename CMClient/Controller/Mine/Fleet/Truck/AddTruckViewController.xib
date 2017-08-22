@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddTruckViewController">
+            <connections>
+                <outlet property="brandModelF" destination="xdG-UC-WHg" id="Orn-Cr-oB4"/>
+                <outlet property="commitBtn" destination="dc6-jJ-WbC" id="Ta7-cT-Zef"/>
+                <outlet property="maxVolumeF" destination="SNE-lI-EjP" id="JIc-1p-nVc"/>
+                <outlet property="maxWeightF" destination="ORC-4Z-cyG" id="KA6-vD-gxU"/>
+                <outlet property="plateNumberF" destination="pNh-wG-w7C" id="he2-QF-jUU"/>
+                <outlet property="scrollContentViewHeight" destination="heX-EZ-EX8" id="cDw-Lp-Nk0"/>
+                <outlet property="vehicleColorF" destination="XJg-nz-qDB" id="ZVK-3X-tSW"/>
+                <outlet property="vehicleModelF" destination="Mng-SK-F1o" id="C0L-Yd-89w"/>
+                <outlet property="vehicleSizeF" destination="TSj-WZ-Q69" id="YXT-2j-B0p"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="840"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nbU-D5-dot" customClass="TPKeyboardAvoidingScrollView">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LwQ-Io-l3S">
+                            <subviews>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车牌号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNh-wG-w7C" customClass="AddFleetTextField">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="43" id="F6c-eX-bFL"/>
+                                    </constraints>
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <action selector="textChanged:" destination="-1" eventType="editingChanged" id="pMF-at-w1C"/>
+                                    </connections>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车辆类型" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mng-SK-F1o" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车辆尺寸" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TSj-WZ-Q69" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入品牌型号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xdG-UC-WHg" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入车辆颜色" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJg-nz-qDB" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入最大载重量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORC-4Z-cyG" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                </textField>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入最大装载量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNE-lI-EjP" customClass="AddFleetTextField">
+                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-jJ-WbC" customClass="AddFleetButton">
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="添加">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="commitOnclick:" destination="-1" eventType="touchUpInside" id="Cqb-88-0IP"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="SNE-lI-EjP" firstAttribute="top" secondItem="ORC-4Z-cyG" secondAttribute="bottom" constant="15" id="3X6-pI-Adb"/>
+                                <constraint firstItem="XJg-nz-qDB" firstAttribute="height" secondItem="pNh-wG-w7C" secondAttribute="height" id="7Xv-rx-KHo"/>
+                                <constraint firstItem="SNE-lI-EjP" firstAttribute="trailing" secondItem="XJg-nz-qDB" secondAttribute="trailing" id="8C5-4g-WEc"/>
+                                <constraint firstItem="TSj-WZ-Q69" firstAttribute="height" secondItem="pNh-wG-w7C" secondAttribute="height" id="ASw-1i-PvB"/>
+                                <constraint firstItem="XJg-nz-qDB" firstAttribute="leading" secondItem="pNh-wG-w7C" secondAttribute="leading" id="GDi-QF-pfJ"/>
+                                <constraint firstItem="Mng-SK-F1o" firstAttribute="trailing" secondItem="pNh-wG-w7C" secondAttribute="trailing" id="H6L-s5-tCC"/>
+                                <constraint firstItem="pNh-wG-w7C" firstAttribute="top" secondItem="LwQ-Io-l3S" secondAttribute="top" constant="20" id="Ins-gf-7F4"/>
+                                <constraint firstItem="dc6-jJ-WbC" firstAttribute="leading" secondItem="XJg-nz-qDB" secondAttribute="leading" id="JCh-py-vXg"/>
+                                <constraint firstItem="ORC-4Z-cyG" firstAttribute="trailing" secondItem="XJg-nz-qDB" secondAttribute="trailing" id="LvY-mx-KlK"/>
+                                <constraint firstItem="dc6-jJ-WbC" firstAttribute="trailing" secondItem="XJg-nz-qDB" secondAttribute="trailing" id="Nkm-uf-uJ8"/>
+                                <constraint firstItem="SNE-lI-EjP" firstAttribute="leading" secondItem="XJg-nz-qDB" secondAttribute="leading" id="NxG-oK-hsu"/>
+                                <constraint firstItem="xdG-UC-WHg" firstAttribute="height" secondItem="pNh-wG-w7C" secondAttribute="height" id="RaL-uP-Bbu"/>
+                                <constraint firstItem="SNE-lI-EjP" firstAttribute="height" secondItem="XJg-nz-qDB" secondAttribute="height" id="RgK-gY-mcI"/>
+                                <constraint firstItem="xdG-UC-WHg" firstAttribute="trailing" secondItem="pNh-wG-w7C" secondAttribute="trailing" id="XLT-8y-q9s"/>
+                                <constraint firstItem="Mng-SK-F1o" firstAttribute="top" secondItem="pNh-wG-w7C" secondAttribute="bottom" constant="15" id="Z79-fL-smk"/>
+                                <constraint firstItem="dc6-jJ-WbC" firstAttribute="height" secondItem="pNh-wG-w7C" secondAttribute="height" id="ZxM-QO-Dge"/>
+                                <constraint firstItem="TSj-WZ-Q69" firstAttribute="leading" secondItem="pNh-wG-w7C" secondAttribute="leading" id="a0J-eC-2DB"/>
+                                <constraint firstItem="TSj-WZ-Q69" firstAttribute="top" secondItem="Mng-SK-F1o" secondAttribute="bottom" constant="15" id="bag-fN-Wkg"/>
+                                <constraint firstAttribute="trailing" secondItem="pNh-wG-w7C" secondAttribute="trailing" constant="15" id="bqO-VG-b8I"/>
+                                <constraint firstItem="Mng-SK-F1o" firstAttribute="leading" secondItem="pNh-wG-w7C" secondAttribute="leading" id="cRA-ap-ZaV"/>
+                                <constraint firstItem="ORC-4Z-cyG" firstAttribute="top" secondItem="XJg-nz-qDB" secondAttribute="bottom" constant="15" id="d12-Vt-Dbe"/>
+                                <constraint firstItem="xdG-UC-WHg" firstAttribute="top" secondItem="TSj-WZ-Q69" secondAttribute="bottom" constant="15" id="gcP-QL-F1a"/>
+                                <constraint firstAttribute="height" constant="800" id="heX-EZ-EX8"/>
+                                <constraint firstItem="dc6-jJ-WbC" firstAttribute="top" secondItem="SNE-lI-EjP" secondAttribute="bottom" constant="30" id="nNj-Ru-Zyn"/>
+                                <constraint firstItem="XJg-nz-qDB" firstAttribute="trailing" secondItem="pNh-wG-w7C" secondAttribute="trailing" id="ovs-n6-RIQ"/>
+                                <constraint firstItem="xdG-UC-WHg" firstAttribute="leading" secondItem="pNh-wG-w7C" secondAttribute="leading" id="p8s-If-YH6"/>
+                                <constraint firstItem="ORC-4Z-cyG" firstAttribute="leading" secondItem="XJg-nz-qDB" secondAttribute="leading" id="rfm-RX-SUr"/>
+                                <constraint firstItem="TSj-WZ-Q69" firstAttribute="trailing" secondItem="pNh-wG-w7C" secondAttribute="trailing" id="trr-pw-asa"/>
+                                <constraint firstItem="pNh-wG-w7C" firstAttribute="leading" secondItem="LwQ-Io-l3S" secondAttribute="leading" constant="15" id="uXe-jg-Jbl"/>
+                                <constraint firstItem="XJg-nz-qDB" firstAttribute="top" secondItem="xdG-UC-WHg" secondAttribute="bottom" constant="15" id="viG-8j-YxW"/>
+                                <constraint firstItem="Mng-SK-F1o" firstAttribute="height" secondItem="pNh-wG-w7C" secondAttribute="height" id="z5a-A9-B3j"/>
+                                <constraint firstItem="ORC-4Z-cyG" firstAttribute="height" secondItem="XJg-nz-qDB" secondAttribute="height" id="zSM-BN-5yb"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="LwQ-Io-l3S" firstAttribute="leading" secondItem="nbU-D5-dot" secondAttribute="leading" id="RJK-nD-MSj"/>
+                        <constraint firstItem="LwQ-Io-l3S" firstAttribute="top" secondItem="nbU-D5-dot" secondAttribute="top" id="U3S-nc-1WN"/>
+                        <constraint firstAttribute="bottom" secondItem="LwQ-Io-l3S" secondAttribute="bottom" id="cJ9-yP-vBg"/>
+                        <constraint firstItem="LwQ-Io-l3S" firstAttribute="centerX" secondItem="nbU-D5-dot" secondAttribute="centerX" id="gS4-r1-L8R"/>
+                        <constraint firstAttribute="trailing" secondItem="LwQ-Io-l3S" secondAttribute="trailing" id="rUT-WR-d4Z"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nbU-D5-dot" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="7dj-iE-Ocf"/>
+                <constraint firstItem="nbU-D5-dot" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Oib-LU-FrX"/>
+                <constraint firstAttribute="bottom" secondItem="nbU-D5-dot" secondAttribute="bottom" id="Xe3-Q1-Q6H"/>
+                <constraint firstAttribute="trailing" secondItem="nbU-D5-dot" secondAttribute="trailing" id="lAc-Te-Qus"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="71.5" y="140"/>
+        </view>
+    </objects>
+</document>
